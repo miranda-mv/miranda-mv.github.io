@@ -3,63 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subir Archivos</title>
+    <title>Ver 4 PDFs</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .pdf-container {
+            width: 45%;
+            height: 500px;
+            border: 1px solid #ccc;
+            background-color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        embed {
             width: 100%;
-            max-width: 500px;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        input[type="file"] {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            font-size: 16px;
-        }
-        .btn-submit {
-            display: block;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px;
-            margin-top: 20px;
-            width: 100%;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-        .btn-submit:hover {
-            background-color: #45a049;
+            height: 100%;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Subir Archivos</h1>
-        <form action="/ruta/del/servidor" method="POST" enctype="multipart/form-data">
-            <label for="files">Seleccionar Archivos</label>
-            <input type="file" id="files" name="files[]" multiple>
-            <button type="submit" class="btn-submit">Subir Archivos</button>
-        </form>
+    <div class="pdf-container">
+        <embed src="pdf1.pdf" type="application/pdf">
+    </div>
+    
+    <div class="pdf-container">
+        <embed src="pdf2.pdf" type="application/pdf">
+    </div>
+    
+    <div class="pdf-container">
+        <embed src="pdf3.pdf" type="application/pdf">
+    </div>
+    
+    <div class="pdf-container">
+        <embed src="pdf4.pdf" type="application/pdf">
     </div>
 
 </body>
